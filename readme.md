@@ -38,6 +38,20 @@ After extracting raw text, an LLM model parses the fields:
 
 ---
 
+## Project structure
+ ```bash
+app/
+  ├── main.py          → FastAPI endpoints
+  ├── models/          → Pydantic schemas
+  ├── OCR/             → OCR engines + parser
+  │     ├── ocr_easy.py
+  │     ├── llm_ocr.py
+  │     └── llm_parser.py
+  ├── storage/         → file uploads directory
+        └── uploads/
+ ```
+
+
 ##  Running with Docker
 
 1. Navigate to the `BACKEND` folder:
